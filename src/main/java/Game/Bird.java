@@ -9,7 +9,7 @@ import java.security.Key;
 public class Bird {
 
     public static final int MAX_TOP = 0;
-    public static final int MAX_BOT = 480;
+    public static final int MAX_BOT = 680;
 
     Image bird = new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\bird_right.png").getImage();
     boolean isPassed = false;
@@ -26,7 +26,7 @@ public class Bird {
 
 
     int layer1 = 0;
-    int layer2 = 1300;
+    int layer2 = 1560;
 
     public void fly() {
         v += a;
@@ -37,13 +37,13 @@ public class Bird {
             y=MAX_TOP;
             bird=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\bird_right.png").getImage();
         }
-        if(y>=480){
+        if(y>=680){
             y=MAX_BOT;
             bird=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\bird_right.png").getImage();
         }
         if (layer2 - v <= 0) {
             layer1 = 0;
-            layer2 = 1300;
+            layer2 = 1560;
         } else {
             layer1 -= v;
             layer2 -= v;

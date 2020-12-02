@@ -19,7 +19,7 @@ public class Sky extends JPanel  implements ActionListener,Runnable {
     Thread tube=new Thread(this);
 
 
-    Timer timer=new Timer(20,this);
+    Timer timer=new Timer(40,this);
     @Override
     public void paint(Graphics g) {
         g= (Graphics2D) g;
