@@ -3,14 +3,14 @@ package Game;
 import javax.swing.*;
 import java.awt.*;
 
-public class Tube {
+public class TubeDown {
     int x;
     int y;
     int v;
 
-    Image tube=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\tube_up.png").getImage();
+    Image tubeDown=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\tube_down.png").getImage();
     Sky sky;
-    public Tube(int x,int y,int v,Sky sky){
+    public TubeDown(int x, int y, int v, Sky sky){
         this.x=x;
         this.y=y;
         this.v=v;
