@@ -83,13 +83,13 @@ public class Sky extends JPanel  implements ActionListener,Runnable {
                 int newY=-random.nextInt(300);
                 int newXtubeDown=1450;
                 int newYtubeDown=random.nextInt(1200);
-                if(newY!=0 && newY<-50) {
+                if(newY!=0 & newY<-50) { //-50,-180
                     listTube.add(new TubeUp(newX, newY, 0, this));
-                    if(newYtubeDown>100){// && (newYtubeDown+newY)<=400) {
+                    //if(newYtubeDown>400 && newYtubeDown <600){// && (newYtubeDown+newY)<=400) {
                         //tubeMap.put(new TubeUp(newX,newY,0,this),new TubeDown(newXtubeDown,newYtubeDown,0,this));
-                        listTube.add(new TubeUp(newX,newY,0,this));//new TubeDown(newXtubeDown,newYtubeDown,0,this));
-                        listTube.add(new TubeUp(newXtubeDown,newYtubeDown,0,this,"down"));
-                    }
+                    //    listTube.add(new TubeUp(newX,newY,0,this));//new TubeDown(newXtubeDown,newYtubeDown,0,this));
+                    //    listTube.add(new TubeUp(newXtubeDown,newYtubeDown,0,this,"down"));
+                    //}
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();

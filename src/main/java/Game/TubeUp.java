@@ -2,9 +2,6 @@ package Game;
 
 import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Random;
 
 public class TubeUp  {
     int x;
@@ -19,7 +16,7 @@ public class TubeUp  {
         this.y=y;
         this.v=v;
         this.sky=sky;
-        tube=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\tube_up_1.png").getImage();
+        tube=new ImageIcon("C:\\Users\\huawei\\IdeaProjects\\FlappyBird\\src\\main\\java\\Game\\res\\both_tube_1.png").getImage();
     }
 
     public TubeUp(int x,int y,int v,Sky sky,String str){
