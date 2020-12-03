@@ -3,7 +3,7 @@ package Game;
 import javax.swing.*;
 import java.awt.*;
 
-public class TubeDown {
+public class TubeDown  {
     int x;
     int y;
     int v;
@@ -20,4 +20,5 @@ public class TubeDown {
     public void see(){
         x=x-sky.bird.v+v;
     }
+
 }

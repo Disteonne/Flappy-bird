@@ -18,6 +18,7 @@ public class Sky extends JPanel  implements ActionListener,Runnable {
 
     Bird bird=new Bird();
     Thread tube=new Thread(this);
+    Thread tubeDown=new Thread(this);
 
 
     Timer timer=new Timer(40,this);
@@ -80,13 +81,15 @@ public class Sky extends JPanel  implements ActionListener,Runnable {
                 Thread.sleep(2500);
                 int newX=1450;//1050;//random.nextInt(1200);
                 int newY=-random.nextInt(300);
-                //int newXtubeDown=1540;
-                //int newYtubeDown=random.nextInt(1200);
+                int newXtubeDown=1450;
+                int newYtubeDown=random.nextInt(1200);
                 if(newY!=0 && newY<-50) {
                     listTube.add(new TubeUp(newX, newY, 0, this));
-                    //if(newXtubeDown>800 && (newXtubeDown+newY)<=400) {
-                    //    tubeMap.put(new TubeUp(newX,newY,0,this),new TubeDown(newXtubeDown,newYtubeDown,0,this));
-                    //}
+                    if(newYtubeDown>100){// && (newYtubeDown+newY)<=400) {
+                        //tubeMap.put(new TubeUp(newX,newY,0,this),new TubeDown(newXtubeDown,newYtubeDown,0,this));
+                        listTube.add(new TubeUp(newX,newY,0,this));//new TubeDown(newXtubeDown,newYtubeDown,0,this));
+                        listTube.add(new TubeUp(newXtubeDown,newYtubeDown,0,this,"down"));
+                    }
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
